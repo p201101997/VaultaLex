@@ -428,7 +428,7 @@ if page == "📊  Descriptive":
             d = mp[mp["tier"]==t]
             tc = TIER_C.get(t, STEEL)
             fig8.add_trace(go.Scatter(x=d["month_dt"], y=d["mrr_usd"], name=t, mode="lines",
-                line=dict(color=tc, width=2.5), fill="tozeroy", fillcolor=tc+"12"))
+                line=dict(color=tc, width=2.5), fill="tozeroy", fillcolor=tc))
         pl(fig8,"Monthly Recurring Revenue by Tier (USD)",320)
         fig8.update_yaxes(tickprefix="$")
         st.plotly_chart(fig8, use_container_width=True)
@@ -691,7 +691,7 @@ elif page == "🔮  Predictive":
             d = cf[cf["subscription_tier"]==t]["clv_predicted_usd"]
             tc = TIER_C.get(t,STEEL)
             fig3.add_trace(go.Box(y=d, name=t, marker_color=tc, boxpoints="outliers",
-                line_color=tc, fillcolor=tc+"22"))
+                line_color=tc, fillcolor=tc))
         pl(fig3,"Predicted CLV Distribution by Tier (USD)",345)
         fig3.update_yaxes(tickprefix="$")
         st.plotly_chart(fig3, use_container_width=True)
@@ -927,7 +927,7 @@ elif page == "🧭  Prescriptive":
             tc = TIER_C.get(t,STEEL)
             fig5.add_trace(go.Violin(x=[t]*len(d), y=d, name=t,
                 box_visible=True, meanline_visible=True,
-                line_color=tc, fillcolor=tc+"18", opacity=0.8))
+                line_color=tc, fillcolor=tc, opacity=0.8))
         pl(fig5,"Uplift Score Distribution by Tier",315)
         st.plotly_chart(fig5, use_container_width=True)
     with col6:
