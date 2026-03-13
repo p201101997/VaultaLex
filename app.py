@@ -727,7 +727,8 @@ elif page == "🔮  Predictive":
         y=list(fct["hi"])+list(fct["lo"])[::-1],
         fill="toself", fillcolor="rgba(212,168,67,0.07)",
         line=dict(color="rgba(0,0,0,0)"), name="Confidence Band"))
-    fig5.add_vline(x="2026-04-01", line_dash="dash", line_color=TEXT_DIM,
+    fig5.add_vline(x=pd.Timestamp("2026-04-01").timestamp() * 1000,
+                   line_dash="dash", line_color=TEXT_DIM,
                    annotation_text="Forecast →", annotation_font_size=10)
     pl(fig5,"MRR: Historical + 9-Month Forecast (USD)",375)
     fig5.update_yaxes(tickprefix="$")
