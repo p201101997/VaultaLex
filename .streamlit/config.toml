@@ -1,1 +1,103 @@
+[theme]
+   base = "dark"
+   primaryColor = "#f5c518"
+   backgroundColor = "#0a0e1a"
+   secondaryBackgroundColor = "#111827"
+   textColor = "#e8eaf0"
+   font = "monospace"
+```
+4. Click **"Commit changes"** → **"Commit directly to main"** → **"Commit changes"**
 
+### Create the `data` folder
+
+1. Click **"Add file"** → **"Create new file"**
+2. In the filename box type:
+```
+   data/.gitkeep
+```
+3. Click **"Commit changes"** → **"Commit directly to main"** → **"Commit changes"**
+
+### Create the `reports` folder
+
+1. Click **"Add file"** → **"Create new file"**
+2. In the filename box type:
+```
+   reports/.gitkeep
+```
+3. Click **"Commit changes"** → **"Commit directly to main"** → **"Commit changes"**
+
+---
+
+## Step 4 — Upload Root Level Files
+
+1. Go back to the **main repo page** (click the repo name at the top)
+2. Click **"Add file"** → **"Upload files"**
+3. Drag and drop OR click **"choose your files"** and select these files **all at once:**
+   - `app.py`
+   - `requirements.txt`
+   - `README.md` *(it will replace the one auto-created)*
+4. At the bottom, click **"Commit changes"**
+
+---
+
+## Step 5 — Upload the `.gitignore` File
+
+> ⚠️ Your file is named `_gitignore` — you must rename it to `.gitignore` on your computer first before uploading.
+
+**How to rename on Windows:**
+- Right click the file → Rename → type `.gitignore` → press Enter → click Yes
+
+**How to rename on Mac:**
+- Click the file once → press Enter → type `.gitignore` → press Enter
+
+Then:
+1. In your repo, click **"Add file"** → **"Upload files"**
+2. Upload the renamed `.gitignore` file
+3. Click **"Commit changes"**
+
+---
+
+## Step 6 — Upload Logo to `assets` Folder
+
+1. Click into the **`assets`** folder in your repo
+2. Click **"Add file"** → **"Upload files"**
+3. Upload `vaultalex_logo.png`
+4. Click **"Commit changes"**
+
+---
+
+## Step 7 — Upload `generate.py` to `data` Folder
+
+1. Click into the **`data`** folder in your repo
+2. Click **"Add file"** → **"Upload files"**
+3. Upload `generate.py`
+4. Click **"Commit changes"**
+
+---
+
+## Step 8 — Upload `pdf_generator.py` to `reports` Folder
+
+1. Click into the **`reports`** folder in your repo
+2. Click **"Add file"** → **"Upload files"**
+3. Upload `pdf_generator.py`
+4. Click **"Commit changes"**
+
+---
+
+## Step 9 — Verify Everything Looks Like This
+
+Go to your repo home page and confirm the structure:
+```
+vaultalex-dashboard/
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── assets/
+│   └── vaultalex_logo.png
+├── .streamlit/
+│   └── config.toml
+├── data/
+│   └── generate.py
+└── reports/
+    └── pdf_generator.py
